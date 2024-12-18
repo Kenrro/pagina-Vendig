@@ -1,0 +1,53 @@
+.Pre_header {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    '. . titulo . .'
+    '. . . . .'
+    '. . . . .'
+    '. . . . .'
+    '. patrocinador patrocinador patrocinador .'
+    ;
+}
+.titulo {
+    grid-area: titulo;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.Carrusel_patrocinador {
+    grid-area: patrocinador;
+    background-color: #0002;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    border: 1px solid #fff;
+}
+legend {
+    position: absolute;
+    top: 0px;
+    left: 50;
+    color: #fff;
+    z-index: 5;
+    background-color: #fff;
+    color: #000;
+}
+.Carrusel_patrocinador .Marcas {
+    animation-name: carruselScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    
+
+}
+@keyframes carruselScroll {
+    0%{
+        transform: translate(500px);
+    }
+    100%{
+        transform: translate(-600px);
+    }
+}

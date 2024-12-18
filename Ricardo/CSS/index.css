@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: 80vh;
     position: relative;
-    background: url(../IMG/preheader.png) top /cover fixed;
+    background: url(../IMG/preheader.png) bottom /cover fixed;
 }
 .Difuminado_pre_header {
     height: 100%;
