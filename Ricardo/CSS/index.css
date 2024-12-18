@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+}
+.Pre_header {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background: url(../IMG/preheader.png) top /cover fixed;
+}
+.Difuminado_pre_header {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0005, #fff1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.content {
+    min-height: 100vh;
+    /* Grid */
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    'head'
+    'contenido'
+    'pie';
+}
+
+header {
+    grid-area: head;
+    background-color: #ecec;
+}
+
+main {
+    grid-area: contenido;
+
+}
+footer {
+    grid-area: pie;
+    background-color: salmon
+}
