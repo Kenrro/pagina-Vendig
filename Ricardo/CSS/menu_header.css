@@ -4,11 +4,16 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
     '. . titulo . .'
+    '. . . info info'
+    '. . . info info'
     '. . . . .'
-    '. . . . .'
-    '. . . . .'
-    '. patrocinador patrocinador patrocinador .'
+    'patrocinador patrocinador patrocinador patrocinador patrocinador'
     ;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../IMG/preheader.png) center /cover fixed;
+
 }
 .titulo {
     grid-area: titulo;
@@ -16,6 +21,7 @@
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 5em;
 }
 .Carrusel_patrocinador {
     grid-area: patrocinador;
@@ -36,17 +42,56 @@ legend {
     z-index: 5;
     background-color: #fff;
     color: #000;
+    display: none;
 }
 .Carrusel_patrocinador .Marcas {
     animation-name: carruselScroll;
-    animation-duration: 25s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
 }
 @keyframes carruselScroll {
     0%{
-        transform: translate(800px);
+        transform: translate(100vw);
     }
     100%{
-        transform: translate(-800px);
+        transform: translate(-100vw);
+    }
+}
+.info {
+    grid-area: info;
+    background: #fff9;
+    text-align: center;
+}
+.info img{
+    width: 50%;
+}
+@media screen and (min-width:900px){
+    .Pre_header {
+        grid-template-areas: 
+        '. titulo . info info'
+        '. . . info info'
+        '. . . info info'
+        '. . . info info'
+        'patrocinador patrocinador patrocinador . .'
+        ;
+        background-size: 62.5%;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .Carrusel_patrocinador .Marcas {
+        animation-duration: 20s;
+    }
+    .titulo {
+        font-size: ;
+    }
+    .Pre_header {
+        height: 100vh;
+    }
+    .Pre_header .Carrusel_patrocinador legend{
+        display: block;
+    }
+    .Carrusel_patrocinador .Marcas {
+        animation-name: carruselScroll2;
+        animation-duration: 20s;
     }
 }

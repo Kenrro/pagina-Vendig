@@ -24,7 +24,7 @@ body{
     min-height: 100vh;
     /* Grid */
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 0.2fr 3fr 1fr;
     grid-template-areas: 
     'head'
     'contenido'
@@ -34,8 +34,38 @@ body{
 header {
     grid-area: head;
     background-color: #ecec;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-areas: 'logo . menu';
+    position: sticky;
+    padding: 5px;
 }
+header #logo {
+    width: 80px;
+    margin: auto;
+}
+header .menu {
+    grid-area: menu;
+}
+header .menu ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
 
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    align-items: center;
+}
+header .menu ul li {
+    margin-right: 20px;
+    
+
+}
+header .menu ul li button {
+    border: none;
+    background: transparent;
+}
 main {
     grid-area: contenido;
 
@@ -44,9 +74,13 @@ footer {
     grid-area: pie;
     background-color: salmon;
 }
-
-@media screen and (min-width:900px){
-    .Pre_header {
-        height: 80vh;
+@keyframes carruselScroll2 {
+    0%{
+        transform: translate(1000px);
+    }
+    100%{
+        transform: translate(-1000px);
     }
 }
+
+
