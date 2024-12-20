@@ -15,6 +15,15 @@
     background: url(../IMG/preheader.png) center /cover fixed;
 
 }
+.Difuminado_pre_header {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0005, #fff1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
 .titulo {
     grid-area: titulo;
     color: #ffffff;
