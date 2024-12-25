@@ -21,7 +21,7 @@
 
 #ph_box1 {
     grid-area: uno;
-    background: url(../IMG/preheader.png) bottom /cover fixed;
+    background: url(../IMG/preheader.png) bottom /cover local;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
