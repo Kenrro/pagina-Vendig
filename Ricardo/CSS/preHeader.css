@@ -106,10 +106,12 @@ legend {
     'uno uno uno dos dos'
     'uno uno uno dos dos'
     ;
-        background-size: 62.5%;
-        background-repeat: no-repeat;
-        background-position: left;
+    background-size: 62.5%;
+    background-repeat: no-repeat;
+    background-position: left;
+    max-height: 780px;
     }
+    
     .Carrusel_patrocinador .Marcas {
         animation-duration: 20s;
     }
