@@ -18,10 +18,7 @@ body{
 }
 
 
-main {
-    grid-area: contenido;
 
-}
 footer {
     grid-area: pie;
     background-color: salmon;
