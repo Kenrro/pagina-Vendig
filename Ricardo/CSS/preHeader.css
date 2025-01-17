@@ -7,6 +7,7 @@
     'dos dos dos'
     ;
     width: 100%;
+    min-height: 90vh;
     position: relative;
 }
 .Difuminado_pre_header {
@@ -47,7 +48,6 @@
     justify-content: space-between;
     flex-direction: row;
     position: relative;
-    border: 1px solid #fff;
 }
 
 legend {
