@@ -1,11 +1,9 @@
 main {
     grid-area: contenido;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "contenido contenido contenido contenido contenido";
-}
+  }
 main section {
-    grid-area: contenido;
+    width: 90%;
     display: grid;
     padding: 20px;
     gap: 20px;
@@ -16,7 +14,6 @@ main section article {
     display: grid;
 }
 main section .articleLeft, .articleRight{
-    grid-template-rows: repeat(2, 40vh);
     grid-template-areas: "img"
     "text";
     border-bottom: 3px solid #000;
@@ -51,15 +48,75 @@ main section article .descripcion button{
 }
 main section article .descripcion button:hover{
     transform: scale(1.2);
-    te
 }
 
+#dos {
+}
+main section article .descripcion button:hover{
+    transform: scale(1.2);
+}
+.comentarios {
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #284dcc;
+    margin: auto;
+}
+.comentarios ul {
+    height: 100%;
+    display: flex;
+    width: 300%;
+    margin: auto;
+
+    animation: slide 10s infinite;
+}
+.comentarios ul .comentario {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    background-color: #43454a;
+    color: #fff;
+    box-shadow: 0px 0px 50px #000;
+}
+
+.comentarios ul .comentario .Foto-perfil {
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0px 0px 50px #000;
+}
+.comentarios ul .comentario .Puntuacion-estrella {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+}
+.comentarios ul .comentario span {
+    position: absolute;
+    font-size: xx-large;
+    top: 5px;
+    left: 25%;
+}
+@keyframes slide {
+    0%{margin-left: 0%;}
+    35%{margin-left: 0%;}
+
+    40%{margin-left: -100%;}
+    70%{margin-left: -100%;}
+
+    75%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
 @media screen and (min-width:900px){
     main {
-        grid-template-areas: ". contenido contenido contenido .";
-        grid-template-columns: 0.5fr repeat(3,1fr) 0.5fr;
+       
     }
     main section {
+        margin: auto;
+        width: 60%;
         gap: 50px;
     }
     main section article {
@@ -75,14 +132,6 @@ main section article .descripcion button:hover{
     main section .articleRight{
         grid-template-areas: "text img";
         border-left: 5px solid #000;
-    }
-    main section .articleLeft img:hover {
-        transform: rotate(-5deg);
-        z-index: 7;
-    }
-    main section .articleRight img:hover {
-        transform: rotate(5deg);
-        z-index: 7;
     }
     main section .articleLeft, .articleRight{
         grid-template-rows: 1fr;
