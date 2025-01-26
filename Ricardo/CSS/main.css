@@ -104,6 +104,7 @@ main section article .descripcion button:hover{
     position: absolute;
     left: 30%;
     width: 40%;
+
 }
 .comentarios ul .comentario span {
     position: absolute;
@@ -151,7 +152,7 @@ main section article .descripcion button:hover{
         border-bottom: none;
     }
     main section article img{
-        height: 20em;
+        height: 100%;
     }
     main section article .descripcion p{
         margin-top: 5em;
